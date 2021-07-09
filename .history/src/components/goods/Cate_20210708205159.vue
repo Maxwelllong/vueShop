@@ -108,12 +108,12 @@ export default {
                 },
             ],
             addCateForm:{
-                attr_name:'',
+                cat_name:'',
                 cat_pid:'',
                 cat_level:'',
             },
             addCateFormRules:{
-                cateName:[
+                cat_name:[
                         { required: true, message: '请输入分类名称', trigger: 'blur' },
                         { min: 2, max: 5, message: '长度在 2 到 5 个字符', trigger: 'blur' }
                     ],
@@ -237,7 +237,7 @@ export default {
                 this.$message.success('删除数据成功')
                 this.getTablelist();
             }
-        },
+        }
         
     },
     mounted(){

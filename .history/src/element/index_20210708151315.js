@@ -42,12 +42,10 @@ import {
     Card,
     Tooltip,
     Icon,
-    Tabs,
-    TabPane
+    Tabs
 } from 'element-ui'
 const element = {
     install: function(Vue) {
-        Vue.use(TabPane)
         Vue.use(Tabs)
         Vue.use(Card)
         Vue.use(Select)
