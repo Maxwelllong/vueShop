@@ -62,7 +62,7 @@
             </el-form>
             <span slot="footer">
                 <el-button @click="addDialog = false">取 消</el-button>
-                <el-button type="primary" @click="updataAddCates">确 定</el-button>
+                <el-button type="primary" @click="updataAddCate">确 定</el-button>
             </span>
         </el-dialog>
         <!-- 修改按钮 -->
@@ -177,8 +177,8 @@ export default {
         addCate(){
             this.addDialog = true;
         },
-        // 添加参数
-        updataAddCates(){
+        // 提交参数
+        updataAddCate(){
             this.$refs.addCateFormRef.validate(async(valid)=>{
                 if(!valid) return ;
                 const { data:res } = await this.$http.post(`categories/${this.selectedOption[2]}/attributes`, {
@@ -206,9 +206,8 @@ export default {
             // console.log(res.data);
             this.editDialog = true
         },
-        // 修改编辑
         async updataAddCate(){
-            this.$refs.editCateFormRef.validate( async valid =>{
+            this.$refs.addCateFormRef.validate( async(valid) => {
                 if(!valid) return this.$message.warning('请确认表单内容是否正确？！');
                 // console.log(this.editCateForm);
                 const { data: res } = await this.$http.put(`categories/${this.editCateForm.cat_id}/attributes/${this.editCateForm.attr_id}`, 

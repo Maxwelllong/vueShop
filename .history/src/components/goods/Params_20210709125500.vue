@@ -62,7 +62,7 @@
             </el-form>
             <span slot="footer">
                 <el-button @click="addDialog = false">取 消</el-button>
-                <el-button type="primary" @click="updataAddCates">确 定</el-button>
+                <el-button type="primary" @click="updataAddCate">确 定</el-button>
             </span>
         </el-dialog>
         <!-- 修改按钮 -->
@@ -178,7 +178,7 @@ export default {
             this.addDialog = true;
         },
         // 添加参数
-        updataAddCates(){
+        updataAddCate(){
             this.$refs.addCateFormRef.validate(async(valid)=>{
                 if(!valid) return ;
                 const { data:res } = await this.$http.post(`categories/${this.selectedOption[2]}/attributes`, {
