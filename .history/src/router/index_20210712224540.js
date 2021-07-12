@@ -33,7 +33,7 @@ const routes = [
       {path:'/categories' ,name:'categories',component:Cate},
       {path:'/params' ,name:'params',component:Params},
       {path:'/goods' ,name:'goodsList',component:GoodsList },
-      {path:'/goods/addgoods' ,name:'addgoods',component:addgoods },
+      {path:'/goods/addgoods' ,name:'addgoods',component:addgoods }
       {path:'/reports' ,name:'report',component:Report }
     ]},
     
