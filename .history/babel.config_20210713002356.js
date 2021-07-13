@@ -1,11 +1,5 @@
 const transform = require("lodash.transform");
 
-const proPlugin = []
-
-if(process.env.NODE_ENV === 'production'){
-  proPlugin.push('transform-remove-console')
-}
-
 module.exports = {
   presets: ["@vue/app"],
   plugins: [
@@ -16,8 +10,7 @@ module.exports = {
         libraryName: "element-ui",
         styleLibraryName: "theme-chalk"
       },
-      ...proPlugin,
-      "@babel/plugin-syntax-dynamic-import"
+      transform-remove-console
     ]
   ]
 };

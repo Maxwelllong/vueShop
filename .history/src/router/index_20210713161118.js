@@ -23,15 +23,10 @@ const Cate = () => import(/* user_rightlist_roleList: "group-foo" */ '../compone
 
 
 
-// import Params from '../components/goods/Params.vue'
-const Params = () => import(/* user_rightlist_roleList: "group-foo" */ '../components/goods/Params.vue')
-// import GoodsList from '../components/goods/goodsList.vue'
-const GoodsList = () => import(/* user_rightlist_roleList: "group-foo" */ '../components/goods/goodsList.vue')
-// import addgoods from '../components/goods/addgoods.vue'
-const addgoods = () => import(/* user_rightlist_roleList: "group-foo" */ '../components/goods/addgoods.vue')
-// import Report from '../components/report/report.vue'
-const Report = () => import(/* user_rightlist_roleList: "group-foo" */ '../components/report/report.vue')
-
+import Params from '../components/goods/Params.vue'
+import GoodsList from '../components/goods/goodsList.vue'
+import addgoods from '../components/goods/addgoods.vue'
+import Report from '../components/report/report.vue'
 
 import nprogress from 'nprogress'
 import 'nprogress/nprogress.css'
